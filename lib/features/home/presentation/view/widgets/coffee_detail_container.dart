@@ -1,4 +1,6 @@
+import 'package:coffe_shop/core/models/coffee_model.dart';
 import 'package:coffe_shop/core/utils/fonts.dart';
+import 'package:coffe_shop/features/home/presentation/view/widgets/rate_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -6,14 +8,11 @@ import 'package:gap/gap.dart';
 class CoffeeDetailContainer extends StatelessWidget {
   const CoffeeDetailContainer({
     super.key,
-    required this.imagePath,
-    required this.coffeeType,
-    required this.coffeeFlavor,
-    required this.price,
     this.onPressed,
+    required this.coffeeModel,
   });
-  final String imagePath, coffeeType, coffeeFlavor;
-  final double price;
+
+  final CoffeeModel coffeeModel;
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
@@ -26,14 +25,19 @@ class CoffeeDetailContainer extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Image.asset(imagePath),
+            Stack(
+              children: [
+                Image.asset(coffeeModel.image),
+                RateContainer(rate: coffeeModel.rate)
+              ],
+            ),
             Gap(16.h),
             Text(
-              coffeeType,
+              coffeeModel.type,
               style: AppFonts.semiBold16Black,
             ),
             Text(
-              coffeeFlavor,
+              coffeeModel.component,
               style: AppFonts.regular12LightBlack,
             ),
             Gap(12.h),
@@ -41,7 +45,7 @@ class CoffeeDetailContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  '\$$price',
+                  '\$${coffeeModel.price}',
                   style: AppFonts.semiBold16Black,
                 ),
                 ElevatedButton(
@@ -63,3 +67,4 @@ class CoffeeDetailContainer extends StatelessWidget {
     );
   }
 }
+

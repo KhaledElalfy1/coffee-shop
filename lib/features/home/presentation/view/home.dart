@@ -1,3 +1,4 @@
+import 'package:coffe_shop/core/helpers/lists.dart';
 
 import 'package:coffe_shop/features/home/presentation/view/widgets/coffee_detail_container.dart';
 import 'package:coffe_shop/features/home/presentation/view/widgets/coffee_type_container.dart';
@@ -7,34 +8,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
-  List<String> coffeeTypes = [
-    'Espresso',
-    'Cappuccino',
-    'Latte',
-    'Macchiato',
-    'Americano',
-    'Mocha',
-  ];
-  List coffeeInGrid = [
-    ['assets/images/coffee1.png', 'Cappuccino', 'with Chocolate', 4.53],
-    ['assets/images/coffee2.png', 'Cappuccino', 'with Oat Milk', 3.90],
-    ['assets/images/coffee3.png', 'Cappuccino', 'with Oat Milk', 5.0],
-    ['assets/images/coffee4.png', 'Cappuccino', 'with Oat Milk', 5.50],
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          physics:const BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           children: [
             const Stack(
               clipBehavior: Clip.none,
@@ -54,16 +36,16 @@ class _HomeViewState extends State<HomeView> {
                 physics: const BouncingScrollPhysics(),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: coffeeTypes.length,
+                itemCount: CoffeeLists.coffeeTypes.length,
                 itemBuilder: (context, index) {
-                  return CoffeeTypeContainer(coffeeTypes: coffeeTypes[index]);
+                  return CoffeeTypeContainer(coffeeTypes: CoffeeLists.coffeeTypes[index]);
                 },
               ),
             ),
             Gap(24.h),
             GridView.builder(
-               physics: const NeverScrollableScrollPhysics(),
-              itemCount: coffeeInGrid.length,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: CoffeeLists.coffee.length,
               shrinkWrap: true,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
@@ -71,10 +53,7 @@ class _HomeViewState extends State<HomeView> {
               ),
               itemBuilder: (context, index) {
                 return CoffeeDetailContainer(
-                  imagePath: coffeeInGrid[index][0],
-                  coffeeType: coffeeInGrid[index][1],
-                  coffeeFlavor: coffeeInGrid[index][2],
-                  price: coffeeInGrid[index][3],
+                  coffeeModel: CoffeeLists.coffee[index],
                   onPressed: () {},
                 );
               },
@@ -85,4 +64,3 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
-
