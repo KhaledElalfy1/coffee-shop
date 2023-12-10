@@ -61,24 +61,23 @@ class _HomeViewState extends State<HomeView> {
               ),
             ),
             Gap(24.h),
-            Expanded(
-              child: GridView.builder(
-                itemCount: coffeeInGrid.length,
-                shrinkWrap: true,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: .7,
-                ),
-                itemBuilder: (context, index) {
-                  return CoffeeDetailContainer(
-                    imagePath: coffeeInGrid[index][0],
-                    coffeeType: coffeeInGrid[index][1],
-                    coffeeFlavor: coffeeInGrid[index][2],
-                    price: coffeeInGrid[index][3],
-                    onPressed: () {},
-                  );
-                },
+            GridView.builder(
+               physics: const NeverScrollableScrollPhysics(),
+              itemCount: coffeeInGrid.length,
+              shrinkWrap: true,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: .7,
               ),
+              itemBuilder: (context, index) {
+                return CoffeeDetailContainer(
+                  imagePath: coffeeInGrid[index][0],
+                  coffeeType: coffeeInGrid[index][1],
+                  coffeeFlavor: coffeeInGrid[index][2],
+                  price: coffeeInGrid[index][3],
+                  onPressed: () {},
+                );
+              },
             ),
           ],
         ),
