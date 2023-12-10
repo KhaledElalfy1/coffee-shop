@@ -34,6 +34,11 @@ class AppFonts {
     color: const Color(0xffFFFFFF),
     fontWeight: FontWeight.w600,
   );
+  static TextStyle semiBold10whit = TextStyle(
+    fontSize: 12.sp,
+    color: const Color(0xffFFFFFF),
+    fontWeight: FontWeight.w600,
+  );
 
   static TextStyle elevationButtonStyle = const TextStyle(
     fontSize: 16,
