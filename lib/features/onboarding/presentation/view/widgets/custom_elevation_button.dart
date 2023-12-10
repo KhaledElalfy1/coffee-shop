@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 class CustomElevationButton extends StatelessWidget {
   const CustomElevationButton({
-    super.key, this.onPressed,
+    super.key,
+    this.onPressed, required this.text, required this.radius,
   });
   final void Function()? onPressed;
+  final String text;
+  final double radius;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -15,12 +18,12 @@ class CustomElevationButton extends StatelessWidget {
         ),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(32),
+            borderRadius: BorderRadius.circular(radius),
           ),
         ),
       ),
-      child: const Text(
-        'Get Started',
+      child:  Text(
+        text,
       ),
     );
   }

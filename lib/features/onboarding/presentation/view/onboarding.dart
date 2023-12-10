@@ -37,7 +37,10 @@ class OnBoarding extends StatelessWidget {
             style: AppFonts.regular14Gray,
           ),
           const Gap(24),
-          CustomElevationButton(onPressed: () {
+          CustomElevationButton(
+            text: 'Get Started',
+            radius: 32,
+            onPressed: () {
             context.pushNamed(Routing.homeView);
           }),
         ],

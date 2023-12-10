@@ -1,4 +1,6 @@
+import 'package:coffe_shop/core/helpers/extentions.dart';
 import 'package:coffe_shop/core/helpers/lists.dart';
+import 'package:coffe_shop/core/routs/routing.dart';
 
 import 'package:coffe_shop/features/home/presentation/view/widgets/coffee_detail_container.dart';
 import 'package:coffe_shop/features/home/presentation/view/widgets/coffee_type_container.dart';
@@ -38,7 +40,8 @@ class HomeView extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: CoffeeLists.coffeeTypes.length,
                 itemBuilder: (context, index) {
-                  return CoffeeTypeContainer(coffeeTypes: CoffeeLists.coffeeTypes[index]);
+                  return CoffeeTypeContainer(
+                      coffeeTypes: CoffeeLists.coffeeTypes[index]);
                 },
               ),
             ),
@@ -52,9 +55,14 @@ class HomeView extends StatelessWidget {
                 childAspectRatio: .7,
               ),
               itemBuilder: (context, index) {
-                return CoffeeDetailContainer(
-                  coffeeModel: CoffeeLists.coffee[index],
-                  onPressed: () {},
+                return GestureDetector(
+                  onTap: () {
+                    context.pushNamed(Routing.detailView,argument: CoffeeLists.coffee[index]);
+                  },
+                  child: CoffeeDetailContainer(
+                    coffeeModel: CoffeeLists.coffee[index],
+                    onPressed: () {},
+                  ),
                 );
               },
             ),
