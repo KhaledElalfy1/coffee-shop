@@ -1,3 +1,4 @@
+import 'package:coffe_shop/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,6 +11,11 @@ class AppFonts {
   static TextStyle regular14Gray = TextStyle(
     fontSize: 14.sp,
     color: const Color(0xffA9A9A9),
+    fontWeight: FontWeight.normal,
+  );
+  static TextStyle regular14Black = TextStyle(
+    fontSize: 14.sp,
+    color: const Color(0xff000000),
     fontWeight: FontWeight.normal,
   );
 
@@ -39,6 +45,16 @@ class AppFonts {
     color: const Color(0xffFFFFFF),
     fontWeight: FontWeight.w600,
   );
+  static TextStyle semiBold18Black = const TextStyle(
+    fontSize: 18,
+    color:  Color(0xff000000),
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle semiBold18Brown = const TextStyle(
+    fontSize: 18,
+    color:  ColorManger.primaryColor,
+    fontWeight: FontWeight.w600,
+  );
 
   static TextStyle elevationButtonStyle = const TextStyle(
     fontSize: 16,
@@ -54,6 +70,6 @@ class AppFonts {
   static TextStyle regular12LightBlack = TextStyle(
     fontSize: 12.sp,
     color: const Color(0xff9B9B9B),
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.normal,
   );
 }
