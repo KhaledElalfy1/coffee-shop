@@ -19,13 +19,13 @@ class CoffeeApp extends StatelessWidget {
         initialRoute: Routing.onboarding,
         theme: ThemeData(
           appBarTheme: AppBarTheme(
+            centerTitle: true,
             color: Colors.white,
             elevation: 0,
             titleTextStyle: AppFonts.semiBold18Black,
-            iconTheme:const IconThemeData(
+            iconTheme: const IconThemeData(
               color: Colors.black,
             ),
-            
           ),
           primaryColor: ColorManger.primaryColor,
           elevatedButtonTheme: ElevatedButtonThemeData(

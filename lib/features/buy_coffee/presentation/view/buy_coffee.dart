@@ -1,3 +1,4 @@
+import 'package:coffe_shop/core/helpers/extentions.dart';
 import 'package:coffe_shop/core/models/coffee_model.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,16 @@ class BuyCoffee extends StatelessWidget {
   final CoffeeModel coffeeModel;
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            context.pop();
+          },
+          icon: const Icon(Icons.arrow_back_ios),
+        ),
+        title: const Text('Order'),
+      ),
+    );
   }
 }
