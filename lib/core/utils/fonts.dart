@@ -24,6 +24,11 @@ class AppFonts {
     color: const Color(0xffDDDDDD),
     fontWeight: FontWeight.normal,
   );
+  static TextStyle regular16Black = TextStyle(
+    fontSize: 16.sp,
+    color: const Color(0xff2F2D2C),
+    fontWeight: FontWeight.normal,
+  );
 
   static TextStyle semiBold16LightBlack = TextStyle(
     fontSize: 16.sp,
@@ -47,12 +52,12 @@ class AppFonts {
   );
   static TextStyle semiBold18Black = const TextStyle(
     fontSize: 18,
-    color:  Color(0xff000000),
+    color: Color(0xff000000),
     fontWeight: FontWeight.w600,
   );
   static TextStyle semiBold18Brown = const TextStyle(
     fontSize: 18,
-    color:  ColorManger.primaryColor,
+    color: ColorManger.primaryColor,
     fontWeight: FontWeight.w600,
   );
 
