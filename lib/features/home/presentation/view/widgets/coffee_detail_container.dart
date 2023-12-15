@@ -57,7 +57,10 @@ class CoffeeDetailContainer extends StatelessWidget {
                     ),
                   ),
                   onPressed: onPressed,
-                  child: const Icon(Icons.add),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
                 )
               ],
             )
@@ -67,4 +70,3 @@ class CoffeeDetailContainer extends StatelessWidget {
     );
   }
 }
-
