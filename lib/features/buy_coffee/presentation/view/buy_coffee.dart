@@ -84,7 +84,7 @@ class BuyCoffee extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 20.h),
               child: const CouponContainer(),
-            )
+            ),
           ],
         ),
       ),
