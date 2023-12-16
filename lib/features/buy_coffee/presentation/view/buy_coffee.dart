@@ -1,7 +1,9 @@
 import 'package:coffe_shop/core/helpers/extentions.dart';
 import 'package:coffe_shop/core/models/coffee_model.dart';
 import 'package:coffe_shop/core/utils/fonts.dart';
+import 'package:coffe_shop/features/buy_coffee/presentation/view/widgets/coupon_container.dart';
 import 'package:coffe_shop/features/buy_coffee/presentation/view/widgets/custom_buy_container.dart';
+import 'package:coffe_shop/features/buy_coffee/presentation/view/widgets/order_amount_container.dart';
 import 'package:coffe_shop/features/buy_coffee/presentation/view/widgets/toggle_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -52,12 +54,12 @@ class BuyCoffee extends StatelessWidget {
             Gap(16.h),
             Row(
               children: [
-                const CustomOrderContainer(
+                const CustomOrderInfoContainer(
                   imageSvgPAth: 'assets/images/edit.svg',
                   text: 'Edit Address',
                 ),
                 Gap(9.w),
-                const CustomOrderContainer(
+                const CustomOrderInfoContainer(
                   imageSvgPAth: 'assets/images/note.svg',
                   text: 'Add Note',
                 ),
@@ -67,9 +69,26 @@ class BuyCoffee extends StatelessWidget {
               color: Color(0xffEAEAEA),
               thickness: 2,
             ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 20.h),
+              child: OrderAmount(
+                coffeeModel: coffeeModel,
+                increment: () {},
+                decrement: () {},
+              ),
+            ),
+            const Divider(
+              color: Color(0xffF4F4F4),
+              thickness: 4,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 20.h),
+              child: const CouponContainer(),
+            )
           ],
         ),
       ),
     );
   }
 }
+

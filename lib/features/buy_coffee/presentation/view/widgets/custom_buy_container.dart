@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
-class CustomOrderContainer extends StatelessWidget {
-  const CustomOrderContainer({
+class CustomOrderInfoContainer extends StatelessWidget {
+  const CustomOrderInfoContainer({
     super.key,
     required this.imageSvgPAth,
     required this.text,
