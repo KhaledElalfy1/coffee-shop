@@ -33,12 +33,13 @@ dependencies:
     sdk: flutter
   flutter_native_splash: ^2.3.7
   flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.9
   gap: ^3.0.1
-  gotrue: ^1.12.6
+  gotrue: ^2.1.0
   readmore: ^2.2.0
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
 

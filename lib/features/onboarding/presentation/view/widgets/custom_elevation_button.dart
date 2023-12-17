@@ -1,9 +1,13 @@
+import 'package:coffe_shop/core/utils/fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomElevationButton extends StatelessWidget {
   const CustomElevationButton({
     super.key,
-    this.onPressed, required this.text, required this.radius,
+    this.onPressed,
+    required this.text,
+    required this.radius,
   });
   final void Function()? onPressed;
   final String text;
@@ -22,8 +26,11 @@ class CustomElevationButton extends StatelessWidget {
           ),
         ),
       ),
-      child:  Text(
+      child: Text(
         text,
+        style: AppFonts.semiBold14whit.copyWith(
+          fontSize: 16.sp,
+        ),
       ),
     );
   }
