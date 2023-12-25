@@ -1,14 +1,16 @@
 import 'package:coffe_shop/core/utils/app_color.dart';
 import 'package:coffe_shop/core/utils/fonts.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 class TotalPriceContainer extends StatelessWidget {
   const TotalPriceContainer({
     super.key,
+    required this.price,
   });
-
+  final double price;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,7 +37,7 @@ class TotalPriceContainer extends StatelessWidget {
             ),
           ),
           Text(
-            '\$ 5.53',
+            '\$ $price',
             style: AppFonts.regular12LightBlack.copyWith(color: Colors.black),
           ),
           Gap(8.w),

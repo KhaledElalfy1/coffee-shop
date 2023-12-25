@@ -1,6 +1,9 @@
 import 'package:coffe_shop/core/models/coffee_model.dart';
 import 'package:coffe_shop/core/utils/fonts.dart';
+import 'package:coffe_shop/features/buy_coffee/presentation/view_model/order_coffee_cubit/order_coffee_cubit_cubit.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
@@ -36,7 +39,7 @@ class OrderAmount extends StatelessWidget {
               Text(coffeeModel.type, style: AppFonts.regular12LightBlack),
             ],
           ),
-          Gap(48.w),
+          Gap(40.w),
           IconButton(
             onPressed: decrement,
             icon: Icon(
@@ -46,7 +49,7 @@ class OrderAmount extends StatelessWidget {
             ),
           ),
           Text(
-            '1',
+            '${BlocProvider.of<OrderCoffeeCubit>(context).count}',
             style: AppFonts.semiBold14whit.copyWith(color: Colors.black),
           ),
           IconButton(

@@ -184,8 +184,13 @@ class DetailsView extends StatelessWidget {
                           onPressed: fromCubit.totalPrice == 0
                               ? null
                               : () {
-                                  context.pushNamed(Routing.buyCoffeeView,
-                                      argument: coffeeModel);
+                                  context.pushNamed(
+                                    Routing.buyCoffeeView,
+                                    argument: {
+                                      'coffeeModel': coffeeModel,
+                                      'totalPrice': fromCubit.totalPrice,
+                                    },
+                                  );
                                 },
                         ),
                       )
