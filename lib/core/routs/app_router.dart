@@ -1,6 +1,8 @@
 import 'package:coffe_shop/core/models/coffee_model.dart';
 import 'package:coffe_shop/core/routs/routing.dart';
 import 'package:coffe_shop/features/buy_coffee/presentation/view/buy_coffee.dart';
+import 'package:coffe_shop/features/buy_coffee/presentation/view_model/order_coffee_cubit/order_coffee_cubit_cubit.dart';
+
 import 'package:coffe_shop/features/details/presentation/view/details_view.dart';
 import 'package:coffe_shop/features/details/presentation/view_model/pick_coffee_size_cubit/pick_coffee_size_cubit.dart';
 import 'package:coffe_shop/features/home/presentation/view/home.dart';
@@ -29,9 +31,24 @@ class AppRouter {
           ),
         );
       case Routing.buyCoffeeView:
-        return MaterialPageRoute(
-          builder: (_) => BuyCoffee(coffeeModel: arguments as CoffeeModel),
-        );
+        if (arguments != null && arguments is Map<String, dynamic>) {
+          CoffeeModel coffeeModel = arguments['coffeeModel'] as CoffeeModel;
+          double totalPrice = (arguments['totalPrice'] as num)
+              .toDouble(); // Handle any number type (int, double)
+
+          return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+              create: (context) => OrderCoffeeCubit(),
+              child:
+                  BuyCoffee(coffeeModel: coffeeModel, totalPrice: totalPrice),
+            ),
+          );
+        } else {
+          // Handle the case when arguments are null or not of the expected type
+          return MaterialPageRoute(
+            builder: (_) => const NoRouting(),
+          );
+        }
 
       default:
         return MaterialPageRoute(
