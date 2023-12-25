@@ -29,7 +29,7 @@ class OrderAmount extends StatelessWidget {
             coffeeModel.image,
             height: 54,
           ),
-          Gap(12.w),
+          Gap(6.w),
           Column(
             children: [
               Text(
@@ -39,7 +39,7 @@ class OrderAmount extends StatelessWidget {
               Text(coffeeModel.type, style: AppFonts.regular12LightBlack),
             ],
           ),
-          Gap(40.w),
+          Gap(30.w),
           IconButton(
             onPressed: decrement,
             icon: Icon(

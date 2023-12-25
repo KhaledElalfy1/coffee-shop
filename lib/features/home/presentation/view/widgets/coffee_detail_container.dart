@@ -31,7 +31,7 @@ class CoffeeDetailContainer extends StatelessWidget {
                 RateContainer(rate: coffeeModel.rate)
               ],
             ),
-            Gap(16.h),
+            Gap(6.h),
             Text(
               coffeeModel.type,
               style: AppFonts.semiBold16Black,
