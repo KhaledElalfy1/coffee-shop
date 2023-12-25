@@ -169,13 +169,17 @@ class DetailsView extends StatelessWidget {
                             style: AppFonts.regular14Gray,
                           ),
                           Gap(8.h),
-                          Text(
-                            '\$ ${fromCubit.totalPrice}',
-                            style: AppFonts.semiBold18Brown,
+                          SizedBox(
+                            height: 49.h,
+                            width: 60.w,
+                            child: Text(
+                              '\$ ${fromCubit.totalPrice}',
+                              style: AppFonts.semiBold18Brown,
+                            ),
                           )
                         ],
                       ),
-                      Gap(42.w),
+                      Gap(35.w),
                       SizedBox(
                         width: 217.w,
                         child: CustomElevationButton(

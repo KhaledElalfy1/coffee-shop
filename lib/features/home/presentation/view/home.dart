@@ -57,7 +57,8 @@ class HomeView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    context.pushNamed(Routing.detailView,argument: CoffeeLists.coffee[index]);
+                    context.pushNamed(Routing.detailView,
+                        argument: CoffeeLists.coffee[index]);
                   },
                   child: CoffeeDetailContainer(
                     coffeeModel: CoffeeLists.coffee[index],

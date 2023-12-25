@@ -1,5 +1,6 @@
 import 'package:coffe_shop/core/helpers/extentions.dart';
 import 'package:coffe_shop/core/models/coffee_model.dart';
+import 'package:coffe_shop/core/routs/routing.dart';
 import 'package:coffe_shop/core/utils/fonts.dart';
 import 'package:coffe_shop/features/buy_coffee/presentation/view/widgets/coupon_container.dart';
 import 'package:coffe_shop/features/buy_coffee/presentation/view/widgets/custom_buy_container.dart';
@@ -163,7 +164,9 @@ class BuyCoffee extends StatelessWidget {
                     CustomElevationButton(
                       text: 'Order',
                       radius: 16,
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pushNamed(Routing.orderDone);
+                      },
                     )
                   ],
                 ),

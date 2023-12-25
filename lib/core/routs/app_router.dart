@@ -8,6 +8,7 @@ import 'package:coffe_shop/features/details/presentation/view_model/pick_coffee_
 import 'package:coffe_shop/features/home/presentation/view/home.dart';
 import 'package:coffe_shop/features/no_route/no_route.dart';
 import 'package:coffe_shop/features/onboarding/presentation/view/onboarding.dart';
+import 'package:coffe_shop/features/order_done/presentation/view/order_done.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -49,7 +50,10 @@ class AppRouter {
             builder: (_) => const NoRouting(),
           );
         }
-
+      case Routing.orderDone:
+        return MaterialPageRoute(
+          builder: (_) => const OrderDone(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => const NoRouting(),
