@@ -31,15 +31,25 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.3
   flutter_native_splash: ^2.3.7
   flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.9
   gap: ^3.0.1
-  gotrue: ^1.12.6
+  gotrue: ^2.1.0
+  readmore: ^2.2.0
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/coffee.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

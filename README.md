@@ -2,15 +2,18 @@
 
 A new Flutter project.
 
-## Getting Started
+# UI UX figma link
 
-This project is a starting point for a Flutter application.
+https://www.figma.com/file/RnYt6NyGoY7WFjXC7GQfpG/Coffee-Shop-Mobile-App-Design-(Community)?type=design&node-id=2%3A2&mode=design&t=fziy2g4UCZklLv3a-1
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# __final app__
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/KhaledElalfy1/coffee-shop/assets/121667425/3c968a28-d088-4822-8393-2ccce4878b5d
+<video src="app.mp4" controls title="Title"></video>
+
+
+# Screenshots
+
+![Alt text](<App screens.jpeg>)
+
