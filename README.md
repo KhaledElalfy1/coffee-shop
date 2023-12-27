@@ -9,7 +9,7 @@ https://www.figma.com/file/RnYt6NyGoY7WFjXC7GQfpG/Coffee-Shop-Mobile-App-Design-
 
 # __final app__
 
-<video src="App.mp4" controls title="Title"></video>
+<video src="app.mp4" controls title="Title"></video>
 
 
 # Screenshots
