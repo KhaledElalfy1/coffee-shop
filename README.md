@@ -9,11 +9,11 @@ https://www.figma.com/file/RnYt6NyGoY7WFjXC7GQfpG/Coffee-Shop-Mobile-App-Design-
 
 # __final app__
 
-https://github.com/KhaledElalfy1/coffee-shop/assets/121667425/3c968a28-d088-4822-8393-2ccce4878b5d
-<video src="app.mp4" controls title="Title"></video>
-
-
-# Screenshots
+## Screenshots
 
 ![Alt text](<App screens.jpeg>)
 
+
+## video demo
+
+https://github.com/KhaledElalfy1/coffee-shop/assets/121667425/3c968a28-d088-4822-8393-2ccce4878b5d
