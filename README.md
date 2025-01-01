@@ -11,8 +11,10 @@ https://www.figma.com/file/RnYt6NyGoY7WFjXC7GQfpG/Coffee-Shop-Mobile-App-Design-
 
 ## Screenshots
 
-![Alt text](<App screens.jpeg>)
+![Alt text](<moc1.png>)
 
+
+![Alt text](<moc2.png>)
 
 ## video demo
 
